@@ -6,7 +6,7 @@ from django.db import models
 class Patient(models.Model):
     full_name = models.CharField(max_length=100)
     age  =  models.IntegerField()
-    email =  models.TextField()
+    email =  models.TextField(unique=True)
     mobile  = models.TextField()
     created_at =  models.DateTimeField(auto_now_add=True)
 
